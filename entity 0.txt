@@ -1,0 +1,10 @@
+iwmap 4
+// entity 0
+{
+guid "{3E4098D2-7221-11EE-B328-2CF05D5F8163}"
+"classname" "worldspawn"
+"lodbias" "detail"
+"lutmaterial" "cm_boost"
+"vbloom" "mp_ethiopia"
+"vcolor" "mp_infection"
+}
