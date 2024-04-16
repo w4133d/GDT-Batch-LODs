@@ -166,13 +166,13 @@ import logging
 logging.basicConfig( 
     level=logging.DEBUG, 
     filename="console.log", 
-    filemode="a+", 
+    filemode="w+", 
     format="%(asctime)-15s %(levelname)-8s %(message)s"
 )
 
 logging.info( '\n\n\n' )
 logging.info( f'{ "=" * 100 }\n{ "=" * 100 }' )
-logging.info( '\n\n\n' )    
+logging.info( '\n\n\n' )
 
 def PrintLn( *print_args, sep: str = ' ', end: str ='\n' ):
     """
@@ -340,7 +340,6 @@ def IsDefined( __param ):
         return True if __param is not None else False
     except NameError:
         return False
-    return True
 
 def IS_TRUE( __param ):
     return True if( __param is True or __param == True ) else False
@@ -370,7 +369,7 @@ def GetFileName( __file__, extention=False ):
 def GetFileType( __file__ ):
     return os.path.splitext( __file__ )[1]
 
-def GetFileTypesInDir( dir, file_format: str or list or tuple ): 
+def GetFileTypesInDir( dir, file_format: str | list | tuple ) ->  str | list | tuple:
     list = []
     
     if( type( file_format ) == str ):
